@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 
 
 var app = express();
-var mongoDB='mongodb://<dbuser>:<dbpassword>@ds121289.mlab.com:21289/locallibrabry';
+var mongoDB='mongodb://test:test@ds121289.mlab.com:21289/locallibrabry';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;

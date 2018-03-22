@@ -14,7 +14,7 @@ var AuthorSchema = new Schema(
 //Virtual for Authors full name;
 AuthorSchema
 .virtual('name')
-get(function(){
+.get(function(){
     return this.family_name+','+ this.first_name ;
 });
 
@@ -26,5 +26,5 @@ AuthorSchema
     return '/catalog/author/' + this._id;
 });
 
-model.exports = mongoose.model('Author', AuthorSchema);
+module.exports = mongoose.model('Author', AuthorSchema);
 
